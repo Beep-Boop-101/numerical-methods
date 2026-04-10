@@ -15,9 +15,9 @@ def gradient_descent(grad_f, x0, learning_rate, num_iterations):
 
     x = x0
 
-    list_of_xs = [x0] # Initialize a list to store the points at each iteration
+    list_of_xs = [x0] # Initialize a list to store the points at each iteration, starting with the initial guess
 
-    for i in range(num_iterations):
+    for i in range(num_iterations): # Loop over the specified number of iterations
         x = x - learning_rate * grad_f(x) # Update the point by moving in the direction of the negative gradient
         list_of_xs.append(x) # Append the updated point to the list
 
